@@ -2,9 +2,29 @@
     margin: 0;
     padding: 0;
 }
+#wrapper{
+    width: 500px;
+    padding: 40px;
+    background: linear-gradient(to bottom, #2db7fc, #b3e2f9);
+}
+form{
+    width: 200px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+input:last-of-type{
+    margin-left: 15px;
+}
 img{
     display: block;
     width: 180px;
     height: auto;
-    margin: 5px auto;
+    margin: 1px auto;
+}
+p{
+    width: 400px;
+    margin: 40px auto;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
