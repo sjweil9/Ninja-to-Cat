@@ -33,17 +33,20 @@ $(document).ready(function(){
     };
     var wincount = 0;
     $('img').click(function() {
-        $(this).fadeTo(400, 0);
         if ($('input:checked').val() == "Random") {
-            $(this).attr('src', randomImage());
+            $(this).fadeOut(200, function(){
+                $(this).attr('src', randomImage());                
+            });
         }
         else if ($('input:checked').val() == "Order") {
-            $(this).attr('src', nextImage($(this).attr('src')));            
+            $(this).fadeOut(200, function(){
+            $(this).attr('src', nextImage($(this).attr('src')));     
+            });    
         }
         else {
             alert("You need to select a game mode!");
         }
-        $(this).fadeTo(400, 1);
+        $(this).fadeIn(200);
         if ($('img:first-of-type').attr('src') == "images/ninja0.png" && $('img:nth-of-type(2)').attr('src') == "images/ninja1.png" && $('img:nth-of-type(3)').attr('src') == "images/ninja2.png" && $('img:nth-of-type(4)').attr('src') == "images/ninja3.png" && $('img:last-of-type').attr('src') == "images/ninja4.png") {
             wincount++;
             $('p').text("Congratulations! You've won " + String(wincount) + " time(s) now!");
