@@ -28,3 +28,8 @@ p{
     font-weight: bold;
     text-align: center;
 }
+button{
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+}

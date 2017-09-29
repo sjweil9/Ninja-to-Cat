@@ -56,4 +56,10 @@ $(document).ready(function(){
             $('p').text("Congratulations! You've won " + String(wincount) + " time(s) now!");
         }
     });
+    $('button').click(function(){
+        for (var i = 1; i <= 5; i++){
+            var tag = 'img:nth-of-type(' + i + ')';
+            $(tag).attr('src', randomImage());
+        }
+    });
 });
